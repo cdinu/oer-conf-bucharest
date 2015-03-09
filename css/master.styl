@@ -1,1 +1,233 @@
+@import '../addons/lfa-content-widgets/css/master'
+// @import '../addons/lfa-backstage/css/main'
+// @import '../addons/lfa-exercises/css/main'
+
+// Respect Horodnic!!
+#rightbar-toggle
+  display: none !important
+
 lfa-framework()
+
+@import leo
+@import chart
+@import _cover
+@import _fonts
+
+// General
+//
+body
+  background-color: #f0f0f0
+  padding: 0
+  font-family: "Source Sans Pro", sans-serif
+  font-weight: 400
+  .menu, .navigation-menu
+    @media (max-width: 768px)
+      background: #00ada3 !important
+  nav#leftbar
+    font-family: "Source Sans Pro", "sans-serif"
+    font-weight: 300
+    font-size: .9em
+    background-color: #121212
+    .tableofcontents li a:hover
+      background-color: rgba(0,173,163,.1) !important
+    .fold-button:hover,
+    ul.tableofcontents > li.active.fold a,
+    ul.tableofcontents > li.active a.foldable
+      background-color: rgba(0,173,163,.3) !important
+article
+  section
+    a
+      color: #00ada3;
+
+    background-color: #fff
+    margin-top: 1em
+    border: 1px solid #ddd
+    padding: 0.3em 1.3em
+    
+    h1
+      margin-top: 0
+      color: #f4761d;
+      @media(max-width: 768px)
+        font-size: 1.7em
+    ul, li
+      text-align: justify
+      line-height: 1.3 em
+      margin-top: .4em
+      margin-bottom: .4em
+    p
+      text-align: justify
+      line-height: 1.3 em
+      margin-top: .7em
+      margin-bottom: .7em
+      @media(max-width: 768px)
+        font-size: .9em
+    p.small-text, p.text-small, .text-small, .small-text
+      @media(max-width: 768px)
+        font-size: .8em
+    em
+      p
+        margin: 0.5em
+        font-size: 0.8em
+    ol
+      @media(max-width: 768px)
+        font-size: .9em
+    ul
+      @media(max-width: 768px)
+        font-size: .9em
+      li
+        text-indent: -.5em
+        list-style: none
+      li:before
+        content: '\2022'
+        color: #ee7401
+        margin-right: 0.2em
+        font-size: 1.5em
+    table
+      width: 100
+      text-align: center
+      font-size: 0.8em
+      line-height: 1.2em
+      thead
+        th, td
+          color: white
+          background-color: #39b8bb
+          padding .5em
+          border 1px solid white
+          border-top: 0
+          font-weight: 300
+          text-align: center
+          &:first-child
+            border-left: 0
+          &:last-child
+            border-right: 0
+          div:first-child
+            padding: .3em
+            // border-bottom: 1px solid white
+      tbody
+        tr:nth-child(odd)
+          background-color: white
+        tr:nth-child(even)
+          background-color: rgb(178,225,227)
+        tr td:first-child
+          width: 25%
+        tr td:not(:last-child)
+          border-right: 1px solid white
+        td, th
+          color: black
+          padding .5em
+      &.stacktable
+        width: 100%
+        .st-head-row.st-head-row-main
+          padding-top: 1em
+        tbody
+          th
+            // background-color: rgb(178,225,227)
+            background-color: #39b8bb
+            color: white
+            font-weight: 400
+            border-bottom: 2px solid #f0f0f0
+          td
+            border-bottom: 1px solid rgb(178,225,227)
+          tr
+            background-color: white
+            border: 0px
+.panel
+  width: 100%
+  border: 1px solid #f0f0f0
+  border-radius: 5px
+  p.table, p.blue
+    font-family: "Exo 2", "Calibri", sans-serif
+  .panel-body
+    padding 0
+  .panel-footer
+    border-top: 4px solid #39b8bb
+  .panel-heading
+    border-bottom: 1px solid #f0f0f0
+    p
+      margin: 0
+      font-size: .8em
+.hchart
+  margin 1em
+  margin-bottom 0
+  font-family: "Source Sans Pro", sans-serif
+  @media (max-width: 750px)
+    .small
+      font-size: 15px
+  .hchart-row
+    margin-bottom: 1em
+  .hchart-legend
+    margin-bottom: 1em
+  .progress-bar
+    font-size: 15px
+    color: #000
+.vchart
+  margin: .5em
+  font-family: "Source Sans Pro", sans-serif
+  .progress-bar
+    font-size: 15px
+    color: black
+.center
+  text-align: center
+
+a.textTooltip
+  cursor: pointer
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none;
+    border-bottom: 1px solid;
+    border-bottom-color: inherit;
+
+.gallery
+  width: 50%
+  margin: 0 auto
+
+.footnote
+  a
+    color: #EE7401
+    font-size: 1.5em
+    cursor: pointer
+.footnote-content
+  font-size: 0.7em
+
+// Intro to finance
+// @cdinu
+
+p.ch01s02sample, p.ch01s03sample
+  input
+    width: 2.8em;
+    text-align: center
+
+.lf-ch00
+  h1, h2, h3, h4
+    text-align: center;
+    margin: 0.3em
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.embed-responsive.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}

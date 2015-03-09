@@ -1,0 +1,30 @@
+include /addons/lfa-content-widgets/mixins/main
+//- include /addons/lfa-backstage/mixins/main
+//- include /addons/lfa-exercises/mixins/main
+
+mixin footnote(number)
+  span.footnote
+    a(tabindex="0", data-trigger="focus hover", class="footnote item-popover", data-id="#{number}", type="button", data-placement="auto")
+
+mixin bibliography(options)
+  - var options = options || window.bibliography;
+  each bibliography in options
+    p
+      = bibliography.author
+      span ,#{' '}
+      if (bibliography.title)
+        em= bibliography.title
+      if (bibliography.location)
+        span  (
+        span= bibliography.location
+        span :
+        span= bibliography.publisher
+        span  ),#{' '}
+      span= bibliography.year
+      if (bibliography.extra)
+        span= bibliography.extra
+
+mixin textTooltip(options)
+  span
+    a(tabindex="0", data-trigger="focus hover", class="textTooltip item-popover", id="#{options}", type="button", data-placement="auto")
+  
